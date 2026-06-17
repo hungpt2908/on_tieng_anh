@@ -29,3 +29,4 @@
 - [x] Tích hợp SIÊU TÀI LIỆU A2 (Phần 1): Bổ sung 50 từ vựng A2 (Động từ bất quy tắc, Du lịch). Tạo chuyên mục bài tập A2 mới chuyên biệt về Thì Quá Khứ (20 câu trắc nghiệm, 20 câu ngữ pháp, 3 đoạn văn luyện đọc).
 - [x] Tích hợp SIÊU TÀI LIỆU A2 (Phần 2): Bổ sung 50 từ vựng A2 (Công việc, Tiền bạc, Cắt ngang). Thêm 40 câu bài tập và 3 đoạn văn luyện đọc Drama Quá khứ tiếp diễn.
 - [x] Tích hợp SIÊU TÀI LIỆU A2 (Phần 3): Bổ sung 50 từ vựng A2 (Sức khỏe, Y tế, Tương lai). Thêm 40 câu bài tập và 3 đoạn văn luyện đọc Thì Tương lai.
+- [x] Tích hợp SIÊU TÀI LIỆU A2 (Phần 4 & 5): Hoàn thiện mốc 500 từ vựng cốt lõi. Bổ sung Giáo dục, Công nghệ, Tính cách, Truyền thông. Thêm 80 câu bài tập (Câu điều kiện loại 1 & Câu So sánh) và 6 đoạn văn thực tế. Khép lại chuỗi A2.
