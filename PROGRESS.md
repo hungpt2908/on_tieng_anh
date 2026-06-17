@@ -9,8 +9,8 @@
 - [x] Lập trình logic (Flashcards, Quizzes)
 
 ## Giai đoạn 2: Đưa code lên GitHub & Cấu hình Hosting
-- [ ] Khởi tạo Git repository local
-- [ ] Lấy URL repository từ người dùng
-- [ ] Cấu hình Vite cho GitHub Pages (`vite.config.js`)
+- [x] Khởi tạo Git repository local
+- [x] Lấy URL repository từ người dùng
+- [x] Cấu hình Vite cho GitHub Pages (`vite.config.js`)
 - [ ] Commit & Push code lên GitHub
 - [ ] Kích hoạt GitHub Pages và lấy link sử dụng
