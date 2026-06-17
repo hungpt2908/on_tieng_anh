@@ -126,19 +126,19 @@ function renderHome(container) {
         Khám phá Phương pháp & Tài nguyên học
       </button>
 
-      \${currentLevelId === 'A1' ? \`
+      ${currentLevelId === 'A1' ? `
       <button onclick="appNavigate('a1practice')" style="padding: 0.8rem 1.5rem; border-radius: 50px; background: #e74c3c; color: white; border: none; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3); transition: all 0.3s ease; animation: pulse 2s infinite;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
         Siêu Tài Liệu Tiếng Anh A1 (Bài Tập & Đọc)
       </button>
-      \` : ''}
+      ` : ''}
 
-      \${currentLevelId === 'A2' ? \`
+      ${currentLevelId === 'A2' ? `
       <button onclick="appNavigate('a2practice')" style="padding: 0.8rem 1.5rem; border-radius: 50px; background: #e74c3c; color: white; border: none; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3); transition: all 0.3s ease; animation: pulse 2s infinite;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
         Siêu Tài Liệu Tiếng Anh A2 (Bài Tập & Đọc)
       </button>
-      \` : ''}
+      ` : ''}
     </div>
     
     <div class="stats-row">
