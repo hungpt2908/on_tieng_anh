@@ -2,9 +2,6 @@ import fs from 'fs';
 import https from 'https';
 import { LEVELS } from './src/data.js';
 
-const API_KEY = 'd19d43382005875a1295b91af27ef4a6158684834f81c6ee28d7ac6fbbb50619';
-const VOICE_ID = 'lUTamkMw7gOzZbFIwmq4';
-
 const wordsToGenerate = [];
 
 for (const level of LEVELS) {
@@ -16,7 +13,6 @@ for (const level of LEVELS) {
 }
 
 const uniqueWords = [...new Set(wordsToGenerate)];
-
 console.log(`Found ${uniqueWords.length} unique words.`);
 
 const audioDir = './public/audio';
@@ -34,27 +30,10 @@ function generateAudio(word) {
       return resolve();
     }
 
-    const options = {
-      hostname: 'api.elevenlabs.io',
-      path: `/v1/text-to-speech/${VOICE_ID}`,
-      method: 'POST',
-      headers: {
-        'Accept': 'audio/mpeg',
-        'xi-api-key': API_KEY,
-        'Content-Type': 'application/json'
-      }
-    };
+    const encodedWord = encodeURIComponent(word);
+    const url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encodedWord}&tl=en-US&client=tw-ob`;
 
-    const data = JSON.stringify({
-      text: word,
-      model_id: "eleven_multilingual_v2",
-      voice_settings: {
-        stability: 0.5,
-        similarity_boost: 0.5
-      }
-    });
-
-    const req = https.request(options, (res) => {
+    https.get(url, (res) => {
       if (res.statusCode === 200) {
         const file = fs.createWriteStream(filePath);
         res.pipe(file);
@@ -64,19 +43,13 @@ function generateAudio(word) {
           resolve();
         });
       } else {
-        let errData = '';
-        res.on('data', chunk => errData += chunk);
-        res.on('end', () => {
-          console.error(`Failed for ${word}: ${res.statusCode} - ${errData}`);
-          // If free tier limit or out of credits, don't crash everything
-          resolve(); 
-        });
+        console.error(`Failed for ${word}: ${res.statusCode}`);
+        resolve(); // Continue anyway
       }
+    }).on('error', (err) => {
+      console.error(`Error requesting ${word}:`, err.message);
+      resolve();
     });
-
-    req.on('error', (e) => reject(e));
-    req.write(data);
-    req.end();
   });
 }
 
@@ -85,7 +58,8 @@ async function run() {
     const word = uniqueWords[i];
     try {
       await generateAudio(word);
-      await new Promise(r => setTimeout(r, 400));
+      // Small delay to prevent being blocked by Google
+      await new Promise(r => setTimeout(r, 200));
     } catch (e) {
       console.error(`Error processing ${word}:`, e);
     }
