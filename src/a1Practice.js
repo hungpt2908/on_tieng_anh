@@ -118,7 +118,7 @@ export function renderA1Practice(container, appNavigate) {
 
   function renderGrammar() {
     let qHtml = `<div class="quiz-question fade-in" style="text-align: left;">
-      <h2 style="color: var(--text-main); margin-bottom: 1.5rem;">B. Điền từ vào chỗ trống (Ngữ pháp A1 - 40 câu)</h2>
+      <h2 style="color: var(--text-main); margin-bottom: 1.5rem;">B. Điền từ vào chỗ trống (Ngữ pháp A1 - 80 câu)</h2>
       <p style="color: var(--text-muted); margin-bottom: 2rem;"><strong>Mẹo:</strong> He/She/It -> Động từ thêm s/es. Danh từ số nhiều -> Thêm s/es.</p>
     `;
     

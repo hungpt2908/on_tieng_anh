@@ -22,4 +22,5 @@
 - [x] Nâng cấp UI Thư viện học liệu: Thêm "Có gì", "Điểm cộng" nổi bật và "Mẹo nhỏ" khi tra từ điển.
 - [x] Khắc phục lỗi hiển thị Font tiếng Việt (Chuyển đổi Outfit sang Inter).
 - [x] Nâng cấp hệ thống phát âm (Audio): Thu âm 350+ từ vựng dưới dạng MP3 (Chất lượng Google TTS) để tăng tốc độ phản hồi và độ ổn định.
-- [x] Tích hợp SIÊU TÀI LIỆU A1: Bổ sung 50 từ vựng cốt lõi, 40 câu bài tập tương tác (Ngữ pháp & Trắc nghiệm) và 3 bài Luyện đọc thực tế.
+- [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 1): Bổ sung 50 từ vựng cốt lõi, 40 câu bài tập và 3 bài Luyện đọc.
+- [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 2): Bổ sung 50 từ vựng thế giới động vật/cơ thể, thêm 40 câu bài tập và 3 bài Luyện đọc mới. Đã sinh thêm 25 file MP3 mới.
