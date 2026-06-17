@@ -117,29 +117,29 @@ export function renderA1Practice(container, appNavigate) {
   ];
 
   function renderGrammar() {
-    let qHtml = \`<div class="quiz-question fade-in" style="text-align: left;">
+    let qHtml = `<div class="quiz-question fade-in" style="text-align: left;">
       <h2 style="color: var(--text-main); margin-bottom: 1.5rem;">B. Điền từ vào chỗ trống (Ngữ pháp A1 - 40 câu)</h2>
       <p style="color: var(--text-muted); margin-bottom: 2rem;"><strong>Mẹo:</strong> He/She/It -> Động từ thêm s/es. Danh từ số nhiều -> Thêm s/es.</p>
-    \`;
+    `;
     
     grammarQuestions.forEach((item, index) => {
-      qHtml += \`
+      qHtml += `
         <div style="margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
-          <label style="font-weight: 500;">\${index + 1}. \${item.q.replace('_______________', \`<input type="text" id="gq\${index}" style="padding: 5px 10px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; font-size: 1rem; width: 120px;" autocomplete="off">\`)}</label>
-          <div id="gres\${index}" style="font-size: 0.9rem; font-weight: 600; display: none;"></div>
+          <label style="font-weight: 500;">${index + 1}. ${item.q.replace('_______________', `<input type="text" id="gq${index}" style="padding: 5px 10px; border: 1px solid var(--border); border-radius: 4px; font-family: inherit; font-size: 1rem; width: 120px;" autocomplete="off">`)}</label>
+          <div id="gres${index}" style="font-size: 0.9rem; font-weight: 600; display: none;"></div>
         </div>
-      \`;
+      `;
     });
     
-    qHtml += \`<button id="checkGrammarBtn" style="margin-top: 1rem; padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-weight: bold; font-family: inherit;">Kiểm tra đáp án</button></div>\`;
+    qHtml += `<button id="checkGrammarBtn" style="margin-top: 1rem; padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-weight: bold; font-family: inherit;">Kiểm tra đáp án</button></div>`;
     
     practiceContent.innerHTML = qHtml;
 
     document.getElementById('checkGrammarBtn').addEventListener('click', () => {
       let score = 0;
       grammarQuestions.forEach((item, index) => {
-        const inputVal = document.getElementById(\`gq\${index}\`).value.trim().toLowerCase();
-        const resDiv = document.getElementById(\`gres\${index}\`);
+        const inputVal = document.getElementById(`gq${index}`).value.trim().toLowerCase();
+        const resDiv = document.getElementById(`gres${index}`);
         resDiv.style.display = 'block';
         if (inputVal === item.a.toLowerCase()) {
           resDiv.style.color = 'var(--success)';
@@ -147,10 +147,10 @@ export function renderA1Practice(container, appNavigate) {
           score++;
         } else {
           resDiv.style.color = 'var(--danger)';
-          resDiv.innerHTML = \`❌ Sai. Đáp án đúng là: <strong>\${item.a}</strong>\`;
+          resDiv.innerHTML = `❌ Sai. Đáp án đúng là: <strong>${item.a}</strong>`;
         }
       });
-      alert(\`Bạn làm đúng \${score}/\${grammarQuestions.length} câu!\`);
+      alert(`Bạn làm đúng ${score}/${grammarQuestions.length} câu!`);
     });
   }
 
@@ -199,41 +199,41 @@ export function renderA1Practice(container, appNavigate) {
   ];
 
   function renderQuiz() {
-    let qHtml = \`<div class="quiz-question fade-in" style="text-align: left;">
+    let qHtml = `<div class="quiz-question fade-in" style="text-align: left;">
       <h2 style="color: var(--text-main); margin-bottom: 2rem;">A. Trắc nghiệm (40 câu)</h2>
-    \`;
+    `;
     
     quizQuestions.forEach((item, index) => {
-      qHtml += \`
+      qHtml += `
         <div style="margin-bottom: 2rem;">
-          <p style="font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem;">\${index + 1}. \${item.q}</p>
-          <div style="display: flex; flex-direction: column; gap: 0.5rem;" id="qopts\${index}">
-            \${item.options.map((opt, i) => \`
+          <p style="font-weight: 600; font-size: 1.1rem; margin-bottom: 1rem;">${index + 1}. ${item.q}</p>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;" id="qopts${index}">
+            ${item.options.map((opt, i) => `
               <label style="cursor: pointer; display: flex; align-items: center; gap: 0.5rem; padding: 10px; border: 1px solid var(--border); border-radius: var(--radius-sm); transition: background 0.2s;">
-                <input type="radio" name="qq\${index}" value="\${i}">
-                \${opt}
+                <input type="radio" name="qq${index}" value="${i}">
+                ${opt}
               </label>
-            \`).join('')}
+            `).join('')}
           </div>
-          <div id="qres\${index}" style="margin-top: 0.5rem; font-weight: bold; display: none;"></div>
+          <div id="qres${index}" style="margin-top: 0.5rem; font-weight: bold; display: none;"></div>
         </div>
-      \`;
+      `;
     });
     
-    qHtml += \`<button id="checkQuizBtn" style="padding: 12px 24px; background: var(--primary); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-weight: bold; font-family: inherit; font-size: 1.1rem;">Nộp bài</button></div>\`;
+    qHtml += `<button id="checkQuizBtn" style="padding: 12px 24px; background: var(--primary); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-weight: bold; font-family: inherit; font-size: 1.1rem;">Nộp bài</button></div>`;
     
     practiceContent.innerHTML = qHtml;
 
     document.getElementById('checkQuizBtn').addEventListener('click', () => {
       let score = 0;
       quizQuestions.forEach((item, index) => {
-        const selected = document.querySelector(\`input[name="qq\${index}"]:checked\`);
-        const resDiv = document.getElementById(\`qres\${index}\`);
+        const selected = document.querySelector(`input[name="qq${index}"]:checked`);
+        const resDiv = document.getElementById(`qres${index}`);
         resDiv.style.display = 'block';
         
         if (!selected) {
           resDiv.style.color = 'var(--danger)';
-          resDiv.innerHTML = \`❌ Chưa chọn. Đáp án đúng là: <strong>\${item.options[item.a]}</strong>\`;
+          resDiv.innerHTML = `❌ Chưa chọn. Đáp án đúng là: <strong>${item.options[item.a]}</strong>`;
           return;
         }
 
@@ -244,10 +244,10 @@ export function renderA1Practice(container, appNavigate) {
           score++;
         } else {
           resDiv.style.color = 'var(--danger)';
-          resDiv.innerHTML = \`❌ Sai. Đáp án đúng là: <strong>\${item.options[item.a]}</strong>\`;
+          resDiv.innerHTML = `❌ Sai. Đáp án đúng là: <strong>${item.options[item.a]}</strong>`;
         }
       });
-      alert(\`Bạn đạt điểm \${score}/\${quizQuestions.length}!\`);
+      alert(`Bạn đạt điểm ${score}/${quizQuestions.length}!`);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
