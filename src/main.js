@@ -133,7 +133,7 @@ function renderHome(container) {
   level.data.forEach((lesson, index) => {
     const card = document.createElement('div');
     card.className = 'lesson-card';
-    card.style.animationDelay = \`\${index * 0.1}s\`;
+    card.style.animationDelay = `${index * 0.1}s`;
     card.onclick = () => navigate('lesson', lesson.id);
     
     card.innerHTML = `
@@ -364,10 +364,10 @@ function updateQuizView() {
       <div class="quiz-question fade-in">
         <div class="quiz-q-label">What is the meaning of:</div>
         <div class="quiz-q-word">${q.question}</div>
-        ${q.questionSub ? \`<div style="color:var(--primary);font-family:monospace;margin-top:0.5rem">\${q.questionSub}</div>\` : ''}
-        ${q.isEnToVi ? \`<button class="audio-btn" style="margin: 1rem auto 0;" onclick="speakWord('\${q.question.replace(/'/g, "\\\\'")}')">
+        ${q.questionSub ? `<div style="color:var(--primary);font-family:monospace;margin-top:0.5rem">${q.questionSub}</div>` : ''}
+        ${q.isEnToVi ? `<button class="audio-btn" style="margin: 1rem auto 0;" onclick="speakWord('${q.question.replace(/'/g, "\\\\'")}')">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon></svg>
-        </button>\` : ''}
+        </button>` : ''}
       </div>
       
       <div class="quiz-options fade-in">
