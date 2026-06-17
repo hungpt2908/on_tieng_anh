@@ -26,7 +26,7 @@ function renderApp() {
   header.className = 'header';
   header.innerHTML = `
     <div class="header-inner">
-      <div class="logo" onclick="navigate('home')">
+      <div class="logo" onclick="appNavigate('home')">
         <div class="logo-icon">E</div>
         <div>
           <div class="logo-text">EngMaster</div>
@@ -64,7 +64,7 @@ window.speakWord = function(text, e) {
 }
 
 // Navigation
-window.navigate = function(view, lessonId = null) {
+window.appNavigate = function(view, lessonId = null) {
   currentView = view;
   if (lessonId) {
     const levelData = LEVELS.find(l => l.id === currentLevelId);
@@ -134,12 +134,12 @@ function renderHome(container) {
     const card = document.createElement('div');
     card.className = 'lesson-card';
     card.style.animationDelay = `${index * 0.1}s`;
-    card.onclick = () => navigate('lesson', lesson.id);
+    card.onclick = () => appNavigate('lesson', lesson.id);
     
     card.innerHTML = `
       <div class="lesson-num">Lesson 0${lesson.id}</div>
-      <div class="lesson-title-en">${lesson.title.split(': ')[1]}</div>
-      <div class="lesson-title-vi">${lesson.titleVi.split(': ')[1]}</div>
+      <div class="lesson-title-en">${lesson.title.split(':').pop().trim()}</div>
+      <div class="lesson-title-vi">${lesson.titleVi.split(':').pop().trim()}</div>
       <div class="lesson-meta">
         <span class="lesson-tag">${lesson.words.length} words</span>
         <div class="lesson-action">→</div>
@@ -156,16 +156,16 @@ function renderLesson(container) {
   const words = currentLesson.words;
   
   container.innerHTML = `
-    <button class="back-btn fade-in" onclick="navigate('home')">← Back to Lessons</button>
+    <button class="back-btn fade-in" onclick="appNavigate('home')">← Back to Lessons</button>
     
     <div class="fade-in">
-      <h1 class="lesson-view-title">${currentLesson.title.split(': ')[1]}</h1>
-      <p class="lesson-view-sub">${currentLesson.titleVi.split(': ')[1]} • ${words.length} words</p>
+      <h1 class="lesson-view-title">${currentLesson.title.split(':').pop().trim()}</h1>
+      <p class="lesson-view-sub">${currentLesson.titleVi.split(':').pop().trim()} • ${words.length} words</p>
       
       <div class="mode-tabs">
         <button class="mode-tab active">Word List</button>
-        <button class="mode-tab" onclick="navigate('flashcard', ${currentLesson.id})">Flashcards</button>
-        <button class="mode-tab" onclick="navigate('quiz', ${currentLesson.id})">Quiz</button>
+        <button class="mode-tab" onclick="appNavigate('flashcard', ${currentLesson.id})">Flashcards</button>
+        <button class="mode-tab" onclick="appNavigate('quiz', ${currentLesson.id})">Quiz</button>
       </div>
 
       <div class="word-list">
@@ -196,7 +196,7 @@ function renderFlashcardMode(container) {
   isFlashcardFlipped = false;
   
   container.innerHTML = `
-    <button class="back-btn fade-in" onclick="navigate('lesson', ${currentLesson.id})">← Back to ${currentLesson.title.split(': ')[1]}</button>
+    <button class="back-btn fade-in" onclick="appNavigate('lesson', ${currentLesson.id})">← Back to ${currentLesson.title.split(':').pop().trim()}</button>
     <div id="fc-root" class="fade-in"></div>
   `;
   
@@ -308,7 +308,7 @@ function renderQuizMode(container) {
   quizAnswered = false;
   
   container.innerHTML = `
-    <button class="back-btn fade-in" onclick="navigate('lesson', ${currentLesson.id})">← Exit Quiz</button>
+    <button class="back-btn fade-in" onclick="appNavigate('lesson', ${currentLesson.id})">← Exit Quiz</button>
     <div id="quiz-root" class="fade-in"></div>
   `;
   
@@ -400,7 +400,7 @@ function showQuizResult() {
         <h2 style="margin-bottom: 2rem; color: var(--text-main);">${msg}</h2>
         
         <div style="display:flex;gap:1rem;justify-content:center">
-          <button class="quiz-restart" style="background:var(--surface);color:var(--text-main);border:2px solid var(--border)" onclick="navigate('lesson', ${currentLesson.id})">Back to Lesson</button>
+          <button class="quiz-restart" style="background:var(--surface);color:var(--text-main);border:2px solid var(--border)" onclick="appNavigate('lesson', ${currentLesson.id})">Back to Lesson</button>
           <button class="quiz-restart" onclick="renderQuizMode(document.querySelector('.main'))">Try Again</button>
         </div>
       </div>
