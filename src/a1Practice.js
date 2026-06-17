@@ -68,6 +68,15 @@ export function renderA1Practice(container, appNavigate) {
 
         <h2 style="color: var(--primary); margin-bottom: 1rem; margin-top: 2rem;">Đoạn 6: My Room & Actions (Căn phòng và Hành động)</h2>
         <p style="font-size: 1.1rem; line-height: 1.8;">"This is my room. It is near the bathroom and the kitchen. Inside, I have a bed to sleep, a table, and a chair. I sit on the chair and stand up when I need to go out. I have a computer and a pen on the table. I use the pen to write. When it is cold, I close the door and the window. When it is hot, I open them. Sometimes, I sing a song and cook food. I love to buy new things for my room!"</p>
+      
+        <h2 style="color: var(--primary); margin-bottom: 1rem; margin-top: 2rem;">Đoạn 13: Giải trí và Thể thao (Entertainment & Sports)</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">"On the weekend, I go to a party. I meet my friends and we talk a lot. We start a fun game and play football. Our team is very good! When we are bored, we watch a funny movie or listen to pop music. My friend plays the guitar, we sing a happy song and tell a bedtime story. We use a camera to take photos and send them to our parents. I learn that friends are never bad!"</p>
+
+        <h2 style="color: var(--primary); margin-bottom: 1rem; margin-top: 2rem;">Đoạn 14: Trong nhà và Bàn ăn (Home & Dining)</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">"I look at the clock on the wall. It is time to eat! I turn on the lamp. On the table, there is a bottle of water and a glass. I use a bowl, a spoon, and a fork to eat my food. It is not hard! After eating, I wash my face and look in the mirror. I wear my watch and go outside. I wait for the bus to go to school."</p>
+
+        <h2 style="color: var(--primary); margin-bottom: 1rem; margin-top: 2rem;">Đoạn 15: Thế giới và Cảm xúc (World & Emotions)</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8;">"We live in a beautiful world. We breathe clean air. I walk on green grass and cross a long bridge to an island. On the beach, I play with sand and throw a stone. I swim in a water pool. In winter, water turns to ice, but a fire is hot. Sometimes I lose my money and feel angry or scared. A poor man wants to be rich. A cheap shirt is not expensive. If I find my money, I stop crying and smile!"</p>
       </div>
     `;
   }
@@ -118,7 +127,7 @@ export function renderA1Practice(container, appNavigate) {
 
   function renderGrammar() {
     let qHtml = `<div class="quiz-question fade-in" style="text-align: left;">
-      <h2 style="color: var(--text-main); margin-bottom: 1.5rem;">B. Điền từ vào chỗ trống (Ngữ pháp A1 - 80 câu)</h2>
+      <h2 style="color: var(--text-main); margin-bottom: 1.5rem;">B. Điền từ vào chỗ trống (Ngữ pháp A1 - 100 câu)</h2>
       <p style="color: var(--text-muted); margin-bottom: 2rem;"><strong>Mẹo:</strong> He/She/It -> Động từ thêm s/es. Danh từ số nhiều -> Thêm s/es.</p>
     `;
     

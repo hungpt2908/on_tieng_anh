@@ -24,3 +24,5 @@
 - [x] Nâng cấp hệ thống phát âm (Audio): Thu âm 350+ từ vựng dưới dạng MP3 (Chất lượng Google TTS) để tăng tốc độ phản hồi và độ ổn định.
 - [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 1): Bổ sung 50 từ vựng cốt lõi, 40 câu bài tập và 3 bài Luyện đọc.
 - [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 2): Bổ sung 50 từ vựng thế giới động vật/cơ thể, thêm 40 câu bài tập và 3 bài Luyện đọc mới. Đã sinh thêm 25 file MP3 mới.
+- [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 3 & 4): Cán mốc 200 từ vựng A1. Thêm mới 100 từ vựng theo chủ đề đa dạng, 40 câu bài tập và 6 đoạn văn đọc thực tế. Sinh thêm 60 file MP3. Nâng cấp tính năng trắc nghiệm ngẫu nhiên.
+- [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 5): Hoàn thiện 250 từ vựng nền tảng A1. Tổng cộng có 100 câu trắc nghiệm ngẫu nhiên, 100 câu điền từ ngữ pháp, 15 đoạn văn luyện đọc thực tế. Đã sinh đầy đủ MP3 cho 250 từ.
