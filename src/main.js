@@ -56,13 +56,21 @@ function renderApp() {
   }
 }
 
-// Speak Function (Text to Speech)
+// Speak Function (Text to Speech with AI Audio Fallback)
 window.speakWord = function(text, e) {
   if (e) e.stopPropagation();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'en-US';
-  utterance.rate = 0.9;
-  window.speechSynthesis.speak(utterance);
+  const sanitizedFilename = text.toLowerCase().replace(/[^a-z0-9]/g, '_') + '.mp3';
+  const baseUrl = import.meta.env.BASE_URL || '/';
+  const audioUrl = baseUrl + 'audio/' + sanitizedFilename;
+  
+  const audio = new Audio(audioUrl);
+  audio.play().catch(err => {
+    console.log("Custom audio not found, falling back to Web Speech API");
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  });
 }
 
 // Navigation
