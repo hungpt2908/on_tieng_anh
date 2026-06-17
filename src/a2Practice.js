@@ -40,6 +40,27 @@ const quizQuestions = [
   {"q":"He doesn't like to work or study. He just wants to sleep all day. He is very __________.","options":["hard-working","professional","lazy","helpful"],"a":2},
   {"q":"Tomorrow, I have an __________ for a new job at the bank. I am so nervous!","options":["office","interview","change","cash"],"a":1},
   {"q":"A person who works in the same office with you is your __________.","options":["boss","customer","colleague","price"],"a":2}
+,
+  {"q":"You use this part of your body to think, learn, and remember things.","options":["heart","muscle","brain","stomach"],"a":2},
+  {"q":"I ate three big pizzas yesterday. Now I have a terrible __________.","options":["headache","stomachache","back","cough"],"a":1},
+  {"q":"A vehicle that drives very fast to take sick or injured people to the hospital is an __________.","options":["ambulance","pharmacy","surgery","disease"],"a":0},
+  {"q":"My __________ hurts because I was lifting heavy boxes all day yesterday.","options":["blood","teeth","medicine","back"],"a":3},
+  {"q":"If you have a terrible __________, you should go to see the dentist immediately.","options":["toothache","fever","allergy","cold"],"a":0},
+  {"q":"When the doctor listens to your chest, he is checking your __________.","options":["skin","heart","bone","tooth"],"a":1},
+  {"q":"I cannot eat peanuts because I have an __________ to them.","options":["headache","flu","allergy","fever"],"a":2},
+  {"q":"The person who stays in the hospital to get treatment from doctors is a __________.","options":["dentist","patient","pharmacy","vitamin"],"a":1},
+  {"q":"You need to swallow this small, round white __________ with some water.","options":["diet","muscle","pill","blood"],"a":2},
+  {"q":"Drinking milk and eating yogurt is very good for your __________, making them hard and strong.","options":["diseases","bones","pain","fevers"],"a":1},
+  {"q":"\"Atishoo!\". I think I am catching a __________.","options":["back","cold","muscle","surgery"],"a":1},
+  {"q":"Her body temperature is 39 degrees Celsius. She has a high __________.","options":["fever","cough","skin","diet"],"a":0},
+  {"q":"After spinning around in circles for two minutes, the boy felt very __________.","options":["fit","healthy","dizzy","strong"],"a":2},
+  {"q":"The red liquid that flows inside your body is called __________.","options":["pill","skin","blood","bone"],"a":2},
+  {"q":"I cannot speak loudly today. I have a __________ throat.","options":["sick","sore","fit","thin"],"a":1},
+  {"q":"Eating a lot of fast food and not exercising will make you __________.","options":["fit","strong","healthy","fat"],"a":3},
+  {"q":"We must go to the __________ to buy some medicine for your headache.","options":["ambulance","surgery","pharmacy","dentist"],"a":2},
+  {"q":"He exercises every day, eats a good diet, and never gets sick. He is very __________.","options":["weak","dizzy","healthy","sore"],"a":2},
+  {"q":"After the car accident, the man needed a major __________ to fix his leg.","options":["surgery","disease","throat","diet"],"a":0},
+  {"q":"Cancer and Covid-19 are dangerous __________.","options":["vitamins","diseases","patients","pills"],"a":1}
 ];
 
 const grammarQuestions = [
@@ -84,6 +105,27 @@ const grammarQuestions = [
   {"q":"I (read) _______________ an important document when the customer came in.","a":"was reading"},
   {"q":"They worked together and finally (finish) _______________ the difficult project.","a":"finished"},
   {"q":"While I was cleaning the office, I (find) _______________ an old coin on the floor.","a":"found"}
+,
+  {"q":"Look at those dark clouds in the sky! It (rain) ____________________ soon.","a":"is going to rain"},
+  {"q":"\"I have a terrible headache.\" - \"Wait here. I (bring) ____________________ you a pill.\"","a":"will bring"},
+  {"q":"I have already booked an appointment. I (see) ____________________ the dentist tomorrow.","a":"am going to see"},
+  {"q":"I think people (live) ____________________ on Mars in the future.","a":"will live"},
+  {"q":"\"Oh no, I forgot my wallet!\" - \"Don't worry, I (pay) ____________________ for your lunch.\"","a":"will pay"},
+  {"q":"Watch out! You (fall) ____________________ into that hole!","a":"are going to fall"},
+  {"q":"She bought a lot of vegetables yesterday because she (make) ____________________ a healthy salad for dinner tonight.","a":"is going to make"},
+  {"q":"I promise I (not/tell) ____________________ anyone about your secret disease.","a":"won't tell"},
+  {"q":"Look at the doctor's sad face. I think he (give) ____________________ us bad news.","a":"is going to give"},
+  {"q":"\"The phone is ringing!\" - \"I (answer) ____________________ it!\"","a":"will answer"},
+  {"q":"Next month, my grandfather (have) ____________________ heart surgery. The hospital has confirmed the date.","a":"is going to have"},
+  {"q":"I hope my father (recover) ____________________ soon from his illness.","a":"will recover"},
+  {"q":"I (start) ____________________ a new diet tomorrow. I have already bought all the healthy food.","a":"am going to start"},
+  {"q":"\"It's freezing in here!\" - \"I (close) ____________________ the window.\"","a":"will close"},
+  {"q":"We (visit) ____________________ the patient in the hospital this weekend. We agreed on this yesterday.","a":"are going to visit"},
+  {"q":"I don't think this medicine (cure) ____________________ your allergy.","a":"will cure"},
+  {"q":"Look at his driving! He (hit) ____________________ that car!","a":"is going to hit"},
+  {"q":"\"Are you ready to order?\" - \"Yes, I (have) ____________________ a salad, please.\"","a":"will have"},
+  {"q":"She is feeling very dizzy and pale. She (faint) ____________________!","a":"is going to faint"},
+  {"q":"I (go) ____________________ to the pharmacy to buy some vitamins later today. It's on my to-do list.","a":"am going to go"}
 ];
 
 export function renderA2Practice(container, navigateCb) {
