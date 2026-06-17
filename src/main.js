@@ -41,6 +41,8 @@ function renderApp() {
   const main = document.createElement('main');
   main.className = 'main';
   
+  app.appendChild(main);
+  
   if (currentView === 'home') {
     renderHome(main);
   } else if (currentView === 'lesson') {
@@ -50,8 +52,6 @@ function renderApp() {
   } else if (currentView === 'quiz') {
     renderQuizMode(main);
   }
-
-  app.appendChild(main);
 }
 
 // Speak Function (Text to Speech)
