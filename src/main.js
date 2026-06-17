@@ -51,6 +51,8 @@ function renderApp() {
     renderFlashcardMode(main);
   } else if (currentView === 'quiz') {
     renderQuizMode(main);
+  } else if (currentView === 'resources') {
+    renderResources(main);
   }
 }
 
@@ -103,6 +105,13 @@ function renderHome(container) {
   hero.innerHTML = `
     <h1>Master <span>English</span> Today</h1>
     <p>Premium learning experience designed to help you build vocabulary fast and effectively.</p>
+    
+    <div style="margin-top: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: center;">
+      <button onclick="appNavigate('resources')" style="padding: 0.8rem 1.5rem; border-radius: 50px; background: var(--primary); color: white; border: none; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3); transition: all 0.3s ease;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+        Khám phá Phương pháp & Tài nguyên học
+      </button>
+    </div>
     
     <div class="stats-row">
       <div class="stat">
@@ -406,6 +415,87 @@ function showQuizResult() {
       </div>
     </div>
   `;
+}
+
+// Render Resources
+function renderResources(container) {
+  const resourcesData = [
+    {
+      category: "1. Học đa kỹ năng & Tổng quát",
+      icon: "📚",
+      color: "#3498db",
+      items: [
+        { name: "BBC Learning English", desc: "Nền tảng uy tín với từ vựng, ngữ pháp, phát âm và luyện nghe qua tin tức (6 Minute English).", url: "https://www.bbc.co.uk/learningenglish" },
+        { name: "British Council", desc: "Trang web chính thức của Hội đồng Anh với bài tập tương tác, podcast và tài liệu chuẩn hóa.", url: "https://learnenglish.britishcouncil.org/" },
+        { name: "Duolingo", desc: "Học qua các trò chơi tương tác ngắn gọn, phù hợp để duy trì thói quen mỗi ngày.", url: "https://www.duolingo.com/" }
+      ]
+    },
+    {
+      category: "2. Luyện nghe & Phát âm",
+      icon: "🎧",
+      color: "#e67e22",
+      items: [
+        { name: "TED-Ed / TED Talks", desc: "Nguồn luyện nghe học thuật tuyệt vời với phụ đề đa ngôn ngữ và bảng transcript.", url: "https://www.ted.com/" },
+        { name: "Spotlight English", desc: "Luyện nghe với tốc độ đọc chậm, rõ chữ, từ vựng đơn giản cho sơ cấp và trung cấp.", url: "https://spotlightenglish.com/" },
+        { name: "VoiceTube", desc: "Học qua video (bài hát, phim) có phụ đề song ngữ, tra từ trực tiếp và luyện nói.", url: "https://www.voicetube.com/" }
+      ]
+    },
+    {
+      category: "3. Luyện đọc & Bổ trợ từ vựng",
+      icon: "📖",
+      color: "#2ecc71",
+      items: [
+        { name: "Breaking News English", desc: "Tin tức thế giới được chia từ Level 0 đến Level 6 kèm bài tập tương tác.", url: "https://breakingnewsenglish.com/" },
+        { name: "Engoo Daily News", desc: "Báo ngắn cập nhật mỗi ngày, giải nghĩa từ vựng cốt lõi và câu hỏi thảo luận.", url: "https://engoo.com/app/daily-news" },
+        { name: "Cambridge / Oxford Dictionaries", desc: "Từ điển chuẩn quốc tế kèm chuyên mục blog giải thích ngữ pháp và lộ trình học.", url: "https://dictionary.cambridge.org/" }
+      ]
+    },
+    {
+      category: "4. Kiểm tra trình độ & Chứng chỉ",
+      icon: "🎓",
+      color: "#9b59b6",
+      items: [
+        { name: "IELTS Online Tests", desc: "Cộng đồng luyện thi IELTS miễn phí, kho đề thi thử sát thực tế kèm đáp án chi tiết.", url: "https://ieltsonlinetests.com/" },
+        { name: "Exam English", desc: "Tổng hợp bài test ngắn miễn phí cho IELTS, TOEIC, TOEFL, Cambridge...", url: "https://www.examenglish.com/" }
+      ]
+    }
+  ];
+
+  let html = `
+    <button class="back-btn fade-in" onclick="appNavigate('home')">← Về trang chủ</button>
+    
+    <div class="fade-in">
+      <h1 class="lesson-view-title" style="margin-top: 1rem;">Tài nguyên & Phương pháp</h1>
+      <p class="lesson-view-sub" style="margin-bottom: 2rem;">Tuyển tập các nền tảng học tiếng Anh tốt nhất hiện nay được phân loại chuyên sâu theo yêu cầu của bạn.</p>
+  `;
+
+  resourcesData.forEach((section, i) => {
+    html += `
+      <h2 class="section-title fade-in" style="animation-delay: ${i*0.1}s; margin-top: 2rem;">
+        <span style="font-size: 1.5rem; margin-right: 0.5rem">${section.icon}</span> 
+        ${section.category}
+      </h2>
+      <div class="lesson-grid fade-in" style="animation-delay: ${i*0.1 + 0.1}s;">
+    `;
+    
+    section.items.forEach(item => {
+      html += `
+        <a href="${item.url}" target="_blank" class="lesson-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; cursor: pointer;">
+          <div style="font-weight: bold; font-size: 1.1rem; color: ${section.color}; margin-bottom: 0.5rem;">${item.name}</div>
+          <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.5; flex: 1; margin: 0;">${item.desc}</p>
+          <div class="lesson-meta" style="margin-top: 1.5rem;">
+            <span class="lesson-tag" style="background: ${section.color}22; color: ${section.color}; font-weight: bold;">Truy cập trang</span>
+            <div class="lesson-action" style="background: ${section.color}; color: white; border-color: ${section.color};">↗</div>
+          </div>
+        </a>
+      `;
+    });
+    
+    html += `</div>`;
+  });
+
+  html += `</div>`;
+  container.innerHTML = html;
 }
 
 // Initial render
