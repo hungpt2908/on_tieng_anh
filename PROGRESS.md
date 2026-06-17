@@ -19,3 +19,4 @@
 - [x] Sửa lỗi DOMException (trang trắng)
 - [x] Mở rộng bộ từ vựng siêu khổng lồ (250+ từ, bổ sung cấp độ C1)
 - [x] Thêm chuyên mục "Tài nguyên & Phương pháp" với danh sách nguồn học liệu chi tiết (BBC, TED, Cambridge...)
+- [x] Nâng cấp UI Thư viện học liệu: Thêm "Có gì", "Điểm cộng" nổi bật và "Mẹo nhỏ" khi tra từ điển.
