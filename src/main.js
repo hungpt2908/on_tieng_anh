@@ -421,42 +421,60 @@ function showQuizResult() {
 function renderResources(container) {
   const resourcesData = [
     {
-      category: "1. Học đa kỹ năng & Tổng quát",
-      icon: "📚",
+      category: "1. Nguồn bài học có sẵn lộ trình (Miễn phí & Bài bản)",
+      icon: "🗺️",
       color: "#3498db",
       items: [
-        { name: "BBC Learning English", desc: "Nền tảng uy tín với từ vựng, ngữ pháp, phát âm và luyện nghe qua tin tức (6 Minute English).", url: "https://www.bbc.co.uk/learningenglish" },
-        { name: "British Council", desc: "Trang web chính thức của Hội đồng Anh với bài tập tương tác, podcast và tài liệu chuẩn hóa.", url: "https://learnenglish.britishcouncil.org/" },
-        { name: "Duolingo", desc: "Học qua các trò chơi tương tác ngắn gọn, phù hợp để duy trì thói quen mỗi ngày.", url: "https://www.duolingo.com/" }
+        { 
+          name: "LearnEnglish (British Council)", 
+          desc: "<strong>Có gì:</strong> Hệ thống bài học chia rõ ràng từ A1 đến C1. Gồm text, audio/video và bài tập trắc nghiệm kiểm tra tại chỗ.", 
+          bonus: "<strong>Điểm cộng:</strong> Tiếng Anh chuẩn Anh - Anh, cực kỳ học thuật và chính thống.",
+          url: "https://learnenglish.britishcouncil.org/" 
+        },
+        { 
+          name: "BBC Learning English", 
+          desc: "<strong>Có gì:</strong> Chuyên mục Course chia theo Basic, Intermediate, Advanced. Gồm chuỗi 6 Minute English, English in a Minute.", 
+          bonus: "<strong>Điểm cộng:</strong> Cho phép tải miễn phí MP3 và PDF về máy để tích trữ làm tài liệu cá nhân.",
+          url: "https://www.bbc.co.uk/learningenglish" 
+        }
       ]
     },
     {
-      category: "2. Luyện nghe & Phát âm",
-      icon: "🎧",
+      category: "2. Nguồn từ vựng thực tế (Kèm ngữ cảnh thực)",
+      icon: "📰",
       color: "#e67e22",
       items: [
-        { name: "TED-Ed / TED Talks", desc: "Nguồn luyện nghe học thuật tuyệt vời với phụ đề đa ngôn ngữ và bảng transcript.", url: "https://www.ted.com/" },
-        { name: "Spotlight English", desc: "Luyện nghe với tốc độ đọc chậm, rõ chữ, từ vựng đơn giản cho sơ cấp và trung cấp.", url: "https://spotlightenglish.com/" },
-        { name: "VoiceTube", desc: "Học qua video (bài hát, phim) có phụ đề song ngữ, tra từ trực tiếp và luyện nói.", url: "https://www.voicetube.com/" }
+        { 
+          name: "Engoo & Breaking News English", 
+          desc: "<strong>Có gì:</strong> Trang báo tin tức chuẩn hóa cho người học. Luôn tổng hợp sẵn bảng từ vựng cốt lõi gồm: Từ, loại từ, phát âm, nghĩa và ví dụ.", 
+          bonus: "<strong>Điểm cộng:</strong> Từ vựng cập nhật theo xu hướng thời sự, không bị khô khan hay lỗi thời.",
+          url: "https://engoo.com/app/daily-news" 
+        },
+        { 
+          name: "Vocabulary.com", 
+          desc: "<strong>Có gì:</strong> Sở hữu hàng nghìn 'Vocabulary Lists' do cộng đồng soạn sẵn: từ vựng thi SAT/IELTS, đến từ vựng theo phim ảnh.", 
+          bonus: "<strong>Điểm cộng:</strong> Định nghĩa từ vựng được viết cực kỳ hài hước, dễ hiểu và dễ nhớ.",
+          url: "https://www.vocabulary.com/" 
+        }
       ]
     },
     {
-      category: "3. Luyện đọc & Bổ trợ từ vựng",
-      icon: "📖",
+      category: "3. Kho từ vựng chính thống (Từ điển lớn)",
+      icon: "🏛️",
       color: "#2ecc71",
       items: [
-        { name: "Breaking News English", desc: "Tin tức thế giới được chia từ Level 0 đến Level 6 kèm bài tập tương tác.", url: "https://breakingnewsenglish.com/" },
-        { name: "Engoo Daily News", desc: "Báo ngắn cập nhật mỗi ngày, giải nghĩa từ vựng cốt lõi và câu hỏi thảo luận.", url: "https://engoo.com/app/daily-news" },
-        { name: "Cambridge / Oxford Dictionaries", desc: "Từ điển chuẩn quốc tế kèm chuyên mục blog giải thích ngữ pháp và lộ trình học.", url: "https://dictionary.cambridge.org/" }
-      ]
-    },
-    {
-      category: "4. Kiểm tra trình độ & Chứng chỉ",
-      icon: "🎓",
-      color: "#9b59b6",
-      items: [
-        { name: "IELTS Online Tests", desc: "Cộng đồng luyện thi IELTS miễn phí, kho đề thi thử sát thực tế kèm đáp án chi tiết.", url: "https://ieltsonlinetests.com/" },
-        { name: "Exam English", desc: "Tổng hợp bài test ngắn miễn phí cho IELTS, TOEIC, TOEFL, Cambridge...", url: "https://www.examenglish.com/" }
+        { 
+          name: "Cambridge Dictionary Plus", 
+          desc: "<strong>Có gì:</strong> Chuyên mục 'Word Lists' chia theo chuẩn khung châu Âu (A1-C2) hoặc các chủ đề. Có thể bấm 'Save' để tạo kho từ riêng.", 
+          bonus: "<strong>Điểm cộng:</strong> Uy tín tuyệt đối, dễ dàng tạo danh sách từ vựng cá nhân miễn phí.",
+          url: "https://dictionary.cambridge.org/plus/" 
+        },
+        { 
+          name: "Oxford Learner's Dictionaries", 
+          desc: "<strong>Có gì:</strong> Mục Oxford 3000 và 5000 tổng hợp danh sách từ vựng quan trọng và cốt lõi nhất trong tiếng Anh.", 
+          bonus: "<strong>Điểm cộng:</strong> Chỉ cần học hết bộ 3000-5000 từ này là đủ dùng cho mọi ngữ cảnh đời sống và công việc.",
+          url: "https://www.oxfordlearnersdictionaries.com/wordlists/" 
+        }
       ]
     }
   ];
@@ -465,8 +483,12 @@ function renderResources(container) {
     <button class="back-btn fade-in" onclick="appNavigate('home')">← Về trang chủ</button>
     
     <div class="fade-in">
-      <h1 class="lesson-view-title" style="margin-top: 1rem;">Tài nguyên & Phương pháp</h1>
-      <p class="lesson-view-sub" style="margin-bottom: 2rem;">Tuyển tập các nền tảng học tiếng Anh tốt nhất hiện nay được phân loại chuyên sâu theo yêu cầu của bạn.</p>
+      <h1 class="lesson-view-title" style="margin-top: 1rem;">Khám phá Thư viện Học liệu</h1>
+      <p class="lesson-view-sub" style="margin-bottom: 1rem;">Nguồn học tiếng Anh chuẩn quốc tế do EngMaster tuyển chọn khắt khe.</p>
+      
+      <div style="background: rgba(241, 196, 15, 0.1); border-left: 4px solid #f1c40f; padding: 1rem; border-radius: 8px; margin-bottom: 2rem;">
+        <strong>💡 Mẹo nhỏ cho bạn:</strong> Khi lấy từ vựng từ các trang này, bạn nên copy <em>cả câu ví dụ</em> của họ thay vì chỉ copy mỗi từ và nghĩa tiếng Việt để học ngữ cảnh tốt nhất nhé!
+      </div>
   `;
 
   resourcesData.forEach((section, i) => {
@@ -481,8 +503,9 @@ function renderResources(container) {
     section.items.forEach(item => {
       html += `
         <a href="${item.url}" target="_blank" class="lesson-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; cursor: pointer;">
-          <div style="font-weight: bold; font-size: 1.1rem; color: ${section.color}; margin-bottom: 0.5rem;">${item.name}</div>
-          <p style="font-size: 0.9rem; color: var(--text-sub); line-height: 1.5; flex: 1; margin: 0;">${item.desc}</p>
+          <div style="font-weight: bold; font-size: 1.2rem; color: ${section.color}; margin-bottom: 1rem;">${item.name}</div>
+          <p style="font-size: 0.95rem; color: var(--text-main); line-height: 1.6; margin-bottom: 0.8rem;">${item.desc}</p>
+          <p style="font-size: 0.95rem; color: ${section.color}; line-height: 1.6; flex: 1; margin: 0; background: ${section.color}11; padding: 0.8rem; border-radius: 8px;">${item.bonus}</p>
           <div class="lesson-meta" style="margin-top: 1.5rem;">
             <span class="lesson-tag" style="background: ${section.color}22; color: ${section.color}; font-weight: bold;">Truy cập trang</span>
             <div class="lesson-action" style="background: ${section.color}; color: white; border-color: ${section.color};">↗</div>
