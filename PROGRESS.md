@@ -27,3 +27,4 @@
 - [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 3 & 4): Cán mốc 200 từ vựng A1. Thêm mới 100 từ vựng theo chủ đề đa dạng, 40 câu bài tập và 6 đoạn văn đọc thực tế. Sinh thêm 60 file MP3. Nâng cấp tính năng trắc nghiệm ngẫu nhiên.
 - [x] Tích hợp SIÊU TÀI LIỆU A1 (Phần 5): Hoàn thiện 250 từ vựng nền tảng A1. Tổng cộng có 100 câu trắc nghiệm ngẫu nhiên, 100 câu điền từ ngữ pháp, 15 đoạn văn luyện đọc thực tế. Đã sinh đầy đủ MP3 cho 250 từ.
 - [x] Tích hợp SIÊU TÀI LIỆU A2 (Phần 1): Bổ sung 50 từ vựng A2 (Động từ bất quy tắc, Du lịch). Tạo chuyên mục bài tập A2 mới chuyên biệt về Thì Quá Khứ (20 câu trắc nghiệm, 20 câu ngữ pháp, 3 đoạn văn luyện đọc).
+- [x] Tích hợp SIÊU TÀI LIỆU A2 (Phần 2): Bổ sung 50 từ vựng A2 (Công việc, Tiền bạc, Cắt ngang). Thêm 40 câu bài tập và 3 đoạn văn luyện đọc Drama Quá khứ tiếp diễn.
