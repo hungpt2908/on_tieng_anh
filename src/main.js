@@ -100,7 +100,7 @@ function renderHome(container) {
   
   let tabsHtml = '';
   LEVELS.forEach(level => {
-    tabsHtml += `<button class="nav-btn ${currentLevelId === level.id ? 'active' : ''}" onclick="setLevel('${level.id}')">${level.name} - ${level.description}</button>`;
+    tabsHtml += `<button class="nav-btn ${currentLevelId === level.id ? 'active' : ''}" onclick="setLevel('${level.id}')">${level.name}</button>`;
   });
   
   nav.innerHTML = `<div class="nav-inner">${tabsHtml}</div>`;
