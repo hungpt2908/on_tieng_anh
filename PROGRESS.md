@@ -14,3 +14,8 @@
 - [x] Cấu hình Vite cho GitHub Pages (`vite.config.js`)
 - [x] Commit & Push code lên GitHub
 - [x] Kích hoạt GitHub Pages và lấy link sử dụng
+
+## Giai đoạn 3: Nâng cấp nội dung và tính năng
+- [x] Sửa lỗi DOMException (trang trắng)
+- [x] Mở rộng bộ từ vựng siêu khổng lồ (250+ từ, bổ sung cấp độ C1)
+- [x] Thêm chuyên mục "Tài nguyên & Phương pháp" với danh sách nguồn học liệu chi tiết (BBC, TED, Cambridge...)
